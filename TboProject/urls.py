@@ -1,6 +1,8 @@
-from django.urls import path
-from . import views
+from rest_framework import routers
 
-urlpatterns = [
-    path('', views.index, name='index'),
-]
+from TboProject.views import ObjectAPIView
+
+router = routers.SimpleRouter()
+router.register(r'objects', ObjectAPIView)
+
+urlpatterns = router.urls

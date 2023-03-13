@@ -16,10 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-from TboProject.apiroutes.apiView import ObjectAPIView
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('TboProject.urls')),
-    path("api/v1/objectlist", ObjectAPIView.as_view())
 ]
