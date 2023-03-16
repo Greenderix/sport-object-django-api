@@ -9,4 +9,4 @@ class ObjectAPIView(mixins.ListModelMixin, mixins.RetrieveModelMixin, GenericVie
     queryset = ObjectLocations.objects.all()
     serializer_class = ObjectLocationSerializer
     filter_backends = [filters.SearchFilter]
-    search_fields = ['$addres']
+    search_fields = ['$addres', '$activ']
